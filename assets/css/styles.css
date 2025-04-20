@@ -1,7 +1,42 @@
-nav {
-  background: #603C87;
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+:root {
+  --font-title: "Architects Daughter", cursive;
+  --purple-bg: #603C87;
 }
 
-section {
+nav {
+  background: var(--purple-bg);
+}
+
+#inicio {
   margin-top: 76px;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1rem, 5vw, 2.5rem);
+  font-size: 1.1rem;
+}
+
+.text-block {
+  margin-bottom: 15px;
+}
+
+h2, h3 {
+  font-family: var(--font-title);
+  font-weight: bold;
+}
+
+h2 {
+  font-size: clamp(1.3rem, 5vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.1rem, 5vw, 2rem);
+}
+
+#list-values {
+  list-style-image: url(../img/ul-cat-dot.svg);
 }
