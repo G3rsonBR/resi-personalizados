@@ -2,15 +2,49 @@
 
 :root {
   --font-title: "Architects Daughter", cursive;
-  --purple-bg: #603C87;
+  --purple: #603C87;
+  --dark: #1c1c1c;
+  --white: #fff;
 }
 
 nav {
-  background: var(--purple-bg);
+  background: var(--purple);
+}
+
+h2, h3, h4 {
+  font-family: var(--font-title);
+  font-weight: bold;
+}
+
+h2 {
+  font-size: clamp(1.3rem, 5vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.1rem, 5vw, 2rem);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 20px;
 }
 
 #inicio {
   margin-top: 76px;
+}
+
+#produtos {
+  color: var(--white);
+  background-color: var(--purple);
+}
+
+.products-section {
+  color: var(--dark);
 }
 
 .text-section {
@@ -24,19 +58,49 @@ nav {
   margin-bottom: 15px;
 }
 
-h2, h3 {
-  font-family: var(--font-title);
-  font-weight: bold;
+#i-whatsapp:hover {
+  background-color: rgba(74, 146, 52, 0.76);
+  box-shadow: 0 0 20px 10px rgba(74, 146, 52, 0.6);
+  filter: blur(0.5px);
 }
 
-h2 {
-  font-size: clamp(1.3rem, 5vw, 2.5rem);
+#i-instagram:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(253, 29, 29, 0.6),     
+    rgba(245, 96, 64, 0.6),     
+    rgba(225, 48, 108, 0.6),   
+    rgba(131, 58, 180, 0.6)  
+  );
+  box-shadow: 0 0 20px 10px rgba(131, 58, 180, 0.651);
+  filter: blur(0.3px);
 }
 
-h3 {
-  font-size: clamp(1.1rem, 5vw, 2rem);
+#i-facebook:hover {
+  background-color: rgba(24, 119, 242, 0.6);
+  box-shadow: 0 0 20px 10px rgba(24, 119, 242, 0.5);
+  filter: blur(0.3px);
+}
+
+#i-telegram:hover {
+  background-color: rgba(0, 136, 204, 0.6);
+  box-shadow: 0 0 20px 10px rgba(0, 136, 204, 0.4);
+  filter: blur(0.3px);
 }
 
 #list-values {
   list-style-image: url(../img/ul-cat-dot.svg);
+}
+
+.icons {
+  display: flex;
+  gap: 50px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  transition: all .3s ease;
 }
